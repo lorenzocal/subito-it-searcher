@@ -192,7 +192,7 @@ def is_telegram_active():
 
 def send_telegram_messages(messages):
     for msg in messages:
-        request_url = "https://api.telegram.org/bot" + "6291835263:AAFEaCfomV0r4Z4F3kvatRO5ORkDjmM7iV4" + "/sendMessage?chat_id=" + "@subito_search_kal" + "&text=" + msg
+        request_url = "https://api.telegram.org/bot" + apiCredentials["token"] + "/sendMessage?chat_id=" + apiCredentials["chatid"] + "&text=" + msg
         requests.get(request_url)
 
 if __name__ == '__main__':
